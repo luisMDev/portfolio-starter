@@ -1,0 +1,52 @@
+<header class="d-flex flex-wrap justify-content-between p-3 sticky-top">
+  <div class="d-flex flex-wrap justify-content-between w-100">
+    <a href="/" class="d-flex align-items-center link-body-emphasis text-decoration-none">
+      <img class="logo img-fluid" [src]="'HEADER.LOGO' | translate" alt="" />
+    </a>
+
+    <button class="d-lg-none btn btn-outline-primary" (click)="open(content)">
+      <i class="ti ti-menu"></i>
+    </button>
+
+    <ul class="d-none d-lg-flex nav gap-3 justify-content-end">
+      <li class="nav-item">
+        <a class="btn btn-outline-primary" [href]="'COMMON.LINK_GITHUB' | translate">
+          <i class="ti ti-brand-github"></i>
+          {{ 'HEADER.STAR_ON_GITHUB' | translate }}
+        </a>
+      </li>
+    </ul>
+  </div>
+</header>
+<ng-template #content let-offcanvas>
+  <div class="offcanvas-header">
+    <h4 class="offcanvas-title" id="offcanvas-basic-title"></h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="offcanvas.dismiss('Cross click')"></button>
+  </div>
+  <div class="offcanvas-body">
+    <ul class="d-flex flex-column nav gap-3 justify-content-end">
+      <li class="nav-item w-100">
+        <a href="/pricing" routerLinkActive="active" class="w-100 nav-link link-body-emphasis text-muted fw-semibold">
+          {{ 'HEADER.PRICING' | translate }}
+        </a>
+      </li>
+
+      <li class="nav-item w-100 me-2">
+        <a [href]="urls.docs" routerLinkActive="active" class="w-100 nav-link link-body-emphasis text-muted fw-semibold">
+          {{ 'HEADER.DOCUMENTATION' | translate }}
+        </a>
+      </li>
+      <li class="nav-item w-100">
+        <a class="btn btn-outline-primary w-100" [href]="'COMMON.LINK_GITHUB' | translate">
+          <i class="ti ti-brand-github"></i>
+          {{ 'HEADER.STAR_ON_GITHUB' | translate }}
+        </a>
+      </li>
+      <li class="nav-item w-100">
+        <a class="btn btn-primary w-100" [href]="'COMMON.LINK_DOCS' | translate">
+          {{ 'HEADER.GO_TO_CONSOLE' | translate }}
+        </a>
+      </li>
+    </ul>
+  </div>
+</ng-template>

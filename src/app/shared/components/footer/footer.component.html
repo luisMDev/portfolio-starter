@@ -1,0 +1,16 @@
+<div class="w-100 p-3">
+  <footer class="d-flex flex-wrap justify-content-center justify-content-lg-between align-items-center flex-column flex-lg-row">
+    <section class="col d-flex align-items-center my-1">
+      <img class="logo img-fluid me-3" [src]="'FOOTER.LOGO' | translate" height="24" width="24" alt="" />
+      <span class="fs-7 text-muted me-4">{{ 'FOOTER.ALL_RIGHTS_RESERVED' | translate: { name: 'portfolio Starter', year: year } }} </span>
+    </section>
+    <section class="nav col justify-content-center justify-content-lg-end d-flex my-1 mt-4 mt-lg-0">
+      <span class="fs-7 text-muted mx-2 mx-lg-4"> {{ 'FOOTER.VERSION' | translate: { version: version } }} </span>
+
+      <div class="vr"></div>
+      <a class="fs-7 text-muted mx-2 mx-lg-4 link-underline-light" [href]="'COMMON.LINK_GITHUB' | translate">
+        <i class="ti ti-brand-github"></i>
+      </a>
+    </section>
+  </footer>
+</div>

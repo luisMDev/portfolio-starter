@@ -1,0 +1,57 @@
+{
+  "portfolio": {
+    "TITLE": "Lorem ipsum dolor sit <br>amet consectetur",
+    "SUBTITLE": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "BUTTON_1": "Lorem Ipsum",
+    "BUTTON_2": "Lorem Ipsum",
+    "MAIN_BG": "https://portfolio-open-rewards.web.app/assets/portfolio-main3.svg",
+    "TRUSTED_BY": "Lorem ipsum dolor sit",
+    "FEATURES_TITLE": "Lorem Ipsum",
+    "FEATURES_SUBTITLE": "Lorem ipsum dolor",
+    "FEATURES_SOON": "ipsum",
+    "FEATURES_TITLE_2": "Lorem ipsum dolor",
+    "FEATURES_SUBTITLE_2": "Lorem ipsum dolor",
+    "DASH_TITLE": "Lorem Ipsum",
+    "DASH_SUBTITLE": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Connect your favorite apps with our API.",
+    "GET_STARTED": "Lorem Ipsum",
+    "THE_CODE": "Lorem ipsum dolor sit amet",
+    "THE_CODE_DESCRIPTION": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "THE_CODE_QUOTE": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\"",
+    "THE_CODE_QUOTE_2": "Lorem M. Ipsum",
+    "THE_CODE_QUOTE_3": "CTO, Lorem",
+    "THE_CODE_TAB_1": "Lorem Ipsum",
+    "THE_CODE_TAB_2": "Lorem Ipsum",
+    "THE_CODE_TAB_3": "Lorem Ipsum",
+    "CODE_THE_WAY_YOU_WANT": "Lorem ipsum dolor",
+    "CODE_THE_WAY_YOU_WANT_DESCRIPTION": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "VIEW_ALL_SDKS": "Lorem Ipsum"
+  },
+  "PRICING": {
+    "HEADER": "Lorem ipsum dolor sit",
+    "DESCRIPTION": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "BUTTON": "Lorem ipsum dolor",
+    "COMPARE": "Lorem ipsum dolor",
+    "PLANS": {
+      "STARTER": "Starter",
+      "PRO": "Pro",
+      "ENTERPRISE": "Enterprise"
+    }
+  },
+  "HEADER": {
+    "LOGO": "/assets/images/logo-min.png",
+    "PRICING": "Pricing",
+    "DOCUMENTATION": "Documentation",
+    "STAR_ON_GITHUB": "Star on Github",
+    "GO_TO_CONSOLE": "Go to console"
+  },
+  "FOOTER": {
+    "LOGO": "/assets/images/logo-min.png",
+    "ALL_RIGHTS_RESERVED": "ⓒ {{year}} {{name}} all rights reserved",
+    "VERSION": "Version {{version}}",
+    "DOCUMENTATION": "Documentation"
+  },
+  "COMMON": {
+    "LINK_GITHUB": "https://github.com/luismdev/portfolio-starter",
+    "LINK_DOCS": "https://github.com/luismdev/portfolio-starter"
+  }
+}

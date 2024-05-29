@@ -1,0 +1,207 @@
+<section class="h-100 text-center d-flex flex-column justify-content-center align-items-center justify-content-center">
+  <div class="title-bg"></div>
+  <img class="logo" style="height: 200px" src="assets/images/logo-xl.svg" alt="" />
+</section>
+<!-- 
+<section class="">
+  <app-main-animation></app-main-animation>
+  <section class="d-none d-lg-flex text-center z-1 position-relative" style="padding: 200px 0rem 6rem; margin-top: -150px">
+    <div class="top-0 brands-img-scroll w-100 h-100 position-absolute z-0 p-5">
+      <div class="top-0 bg bg-primary w-100 h-100 z-0 rounded-5"></div>
+    </div>
+    <div class="container px-5 pt-3 z-1 position-relative">
+      <h5 class="mb-3 fs-5 text-gray-900" [innerHTML]="'portfolio.TRUSTED_BY' | translate"></h5>
+      <div class="row row-cols-1 row-cols-lg-5 flex-wrap justify-content-center px-5">
+        @for (brand of brands; track brand) {
+          <div class="col p-5 py-3">
+            <img class="brand img-fluid" [src]="brand" alt="" />
+          </div>
+        }
+      </div>
+    </div>
+  </section>
+</section>
+
+<section class="container mt-5 pt-5">
+  <div class="row position-relative">
+    <div class="feature-1"></div>
+    @for (item of howItWorks; track item; let i = $index) {
+      <div class="mt-4" [class]="i === 0 || i === 5 ? 'col-lg-6' : 'col-lg-3'">
+        <div class="card mb-5 h-100" [class]="'card-scroll card-scroll-' + (i + 1)">
+          <div class="how-it-works-bg"></div>
+          <div class="card-body pb-0 position-relative z-2">
+            <h3 class="fs-5 lh-1 fw-bold text-body-emphasis mb-3" [innerHTML]="item.title"></h3>
+            <p class="fs-6 text-body-secondary m-0" [innerHTML]="item.description"></p>
+          </div>
+          <img
+            [src]="item.img"
+            class="position-relative z-2 img-fluid how-it-works-img"
+            alt="Bootstrap Themes"
+            style="height: 200px"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    }
+  </div>
+</section>
+
+<section class="px-lg-5">
+  <div class="container px-lg-5">
+    <div class="row px-5">
+      <div class="col-lg-6 offset-lg-1 features-scroll">
+        <ul class="feature-group">
+          @for (feature of features; track feature; let i = $index) {
+            <li
+              class="list-group-item d-flex justify-content-between align-items-start feature py-2 px-lg-3 px-2"
+              [class.active]="activeFeature === i"
+              (click)="activeFeature = i"
+            >
+              <div class="ms-2 me-auto">
+                <div class="d-flex align-items-center gap-3">
+                  <h5
+                    class="fw-semibold fs-4 px-2"
+                    [class]="activeFeature !== i ? 'text-body-tertiary' : 'text-body-emphasis'"
+                    [innerHTML]="feature.title"
+                  ></h5>
+                  @if (feature.soon) {
+                    <span class="badge mb-1 text-bg-primary rounded-pill" [innerHTML]="'portfolio.FEATURES_SOON' | translate"></span>
+                  }
+                </div>
+                @if (activeFeature === i) {
+                  <span class="fs-6 px-2 description text-body-secondary" [innerHTML]="feature.description"></span>
+                }
+              </div>
+            </li>
+          }
+        </ul>
+      </div>
+      <div class="d-none col-lg-5 d-lg-flex justify-content-center align-items-center position-relative">
+        <div class="feature-bg"></div>
+        <div class="feature-img-scroll">
+          <div class="feature-img" [style.backgroundImage]="'url(' + features[activeFeature].img + ')'"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pt-5 pb-3 my-5">
+  <div class="dash p-2">
+    <div class="container">
+      <div class="row my-5">
+        <div class="col-md-4 mb-5 mb-lg-0">
+          <h3 class="fs-4 lh-1 fw-bold text-body-emphasis mb-3" [innerHTML]="'portfolio.DASH_TITLE' | translate"></h3>
+          <p class="mt-3fs-6 text-body-secondary" [innerHTML]="'portfolio.DASH_SUBTITLE' | translate"></p>
+          <div class="d-flex mt-4 gap-2">
+            <button class="btn btn-outline-primary d-flex align-items-center gap-2">
+              {{ 'portfolio.GET_STARTED' | translate }}
+              <div class="ti ti-arrow-narrow-right"></div>
+            </button>
+          </div>
+        </div>
+        <div class="col-md-7 offset-md-1">
+          <div class="row row-cols-2 row-cols-lg-4">
+            @for (item of dash; track item; let i = $index) {
+              <div class="col mb-4 mb-lg-0">
+                <div class="card" [class]="'dash-scroll dash-scroll-' + (i + 1)">
+                  <div class="card-body d-flex flex-column">
+                    @if (item.img) {
+                      <img class="mb-5 img-fluid" [src]="item.img" width="70" height="70" />
+                    }
+                    @if (item.icon) {
+                      <i class="fs-1 mb-5 img-fluid" style="width: 50px; height: 50px" [class]="item.icon"></i>
+                    }
+                    <small class="text-body-secondary" [innerHTML]="item.title"></small>
+                    <h6 class="fs-5 fw-bold m-0" [innerHTML]="item.description"></h6>
+                  </div>
+                </div>
+              </div>
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="mt-0 pt-0 mt-lg-5 pt-lg-5">
+  <div class="container my-0 py-0 my-lg-5 py-lg-5">
+    <div class="row my-0 my-lg-5 py-5 px-4 px-lg-0">
+      <div class="col-md-5 mb-5 mb-lg-0">
+        <h2 class="display-5 lh-1 fw-bold text-body-emphasis mb-5" [innerHTML]="'portfolio.THE_CODE' | translate"></h2>
+        <p class="fs-6 text-body-secondary" [innerHTML]="'portfolio.THE_CODE_DESCRIPTION' | translate"></p>
+        <figure class="mt-5">
+          <blockquote class="blockquote">
+            <p class="fs-6" [innerHTML]="'portfolio.THE_CODE_QUOTE' | translate"></p>
+          </blockquote>
+          <div class="d-flex align-items-center gap-2">
+            <span class="fs-6 text-body-tertiary" [innerHTML]="'portfolio.THE_CODE_QUOTE_2' | translate"></span>
+            <figcaption
+              class="blockquote-footer fs-6 m-0 text-body-tertiary"
+              [innerHTML]="'portfolio.THE_CODE_QUOTE_3' | translate"
+            ></figcaption>
+          </div>
+        </figure>
+      </div>
+      <div class="col-md-6 offset-md-1 card-console d-flex justify-content-center position-relative">
+        <div class="console-bg"></div>
+        <div class="card w-100 console-scroll">
+          <div class="card-header">
+            <ul class="nav nav-tabs card-header-tabs">
+              <li class="nav-item">
+                <a class="nav-link" style="cursor: pointer" aria-current="page" (click)="codeTab = 0" [class.active]="codeTab === 0">
+                  <i class="ti ti-link me-2"></i>
+                  {{ 'portfolio.THE_CODE_TAB_1' | translate }}
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" style="cursor: pointer" (click)="codeTab = 1" [class.active]="codeTab === 1">
+                  <i class="ti ti-link me-2"></i>
+                  {{ 'portfolio.THE_CODE_TAB_2' | translate }}
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" style="cursor: pointer" (click)="codeTab = 2" [class.active]="codeTab === 2">
+                  <i class="ti ti-link me-2"></i>
+                  {{ 'portfolio.THE_CODE_TAB_3' | translate }}
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="card-body pt-0">
+            <pre class="mb-0 mt-3" [innerHTML]="code[codeTab] | safe: 'html'"></pre>
+            <div class="flickering"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="position-relative p-lg-5 p-4" style="margin-top: 7rem; margin-bottom: 5rem">
+  <div class="container position-relative">
+    <div class="console-bg"></div>
+    <div
+      class="platforms-scroll position-relative p-5 text-muted bg-body border border-dashed rounded-5 row mt-0 row-cols-1 row-cols-lg-2 g-5 py-5"
+    >
+      <div class="col d-flex flex-column align-items-start gap-2 px-0 px-lg-5 my-0 my-lg-5">
+        <h2 class="fw-bold text-body-emphasis" [innerHTML]="'portfolio.CODE_THE_WAY_YOU_WANT' | translate"></h2>
+        <p class="text-body-secondary" [innerHTML]="'portfolio.CODE_THE_WAY_YOU_WANT_DESCRIPTION' | translate"></p>
+        <a [href]="urls.console" class="btn btn-primary btn-lg" [innerHTML]="'portfolio.VIEW_ALL_SDKS' | translate"></a>
+      </div>
+
+      <div class="col ps-lg-5 p-0 mt-5">
+        <div class="row row-cols-5 row-cols-lg-4 g-4 ps-0 ps-lg-5">
+          @for (codePlatform of codePlatforms; track codePlatform) {
+            <div class="col d-flex flex-column gap-2">
+              <img [src]="codePlatform.img" [alt]="codePlatform.link" width="46px" height="46px" />
+            </div>
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->

@@ -1,0 +1,19 @@
+:host {
+  header {
+    backdrop-filter: blur(10px);
+    background-color: rgba(var(--bs-body-bg-rgb), 0.6);
+    .logo {
+      height: 37px;
+    }
+    .text-logo {
+      font-size: 2rem;
+      font-weight: 900;
+      color: var(--bs-primary);
+    }
+    .nav-link {
+      &.active {
+        color: var(--bs-primary) !important;
+      }
+    }
+  }
+}
