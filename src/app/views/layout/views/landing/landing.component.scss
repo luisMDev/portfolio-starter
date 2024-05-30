@@ -48,536 +48,398 @@
         transform: perspective(250px) translateZ(200px);
       }
     }
-    // &2 {
-    //   animation-name: title-bg-animation2;
-    //   animation-duration: 10s;
-    //   animation-iteration-count: infinite;
-    //   animation-timing-function: linear;
-    //   @keyframes title-bg-animation2 {
-    //     0% {
-    //       transform: perspective(250px) translateZ(-200px);
-    //     }
-    //     80% {
-    //       opacity: 1;
-    //     }
-    //     100% {
-    //       opacity: 0;
-    //       transform: perspective(250px) translateZ(200px);
-    //     }
-    //   }
-    // }
-    // &3 {
-    //   animation-name: title-bg-animation3;
-    //   animation-duration: 15s;
-    //   animation-iteration-count: infinite;
-    //   animation-timing-function: linear;
-    //   @keyframes title-bg-animation3 {
-    //     0% {
-    //       transform: perspective(250px) translateZ(-400px);
-    //     }
-    //     80% {
-    //       opacity: 1;
-    //     }
-    //     100% {
-    //       opacity: 0;
-    //       transform: perspective(250px) translateZ(200px);
-    //     }
-    //   }
-    // }
+  }
+  .demo-1 {
+    --color-text: #fff;
+    --color-bg: #000;
+    --color-link: #f9d77e;
+    --color-link-hover: #fff;
+    --color-info: #efc453;
+    --glitch-width: 100vw;
+    --glitch-height: 100vh;
+    --gap-horizontal: 10px;
+    --gap-vertical: 5px;
+    --time-anim: 4s;
+    --delay-anim: 2s;
+    --blend-mode-1: none;
+    --blend-mode-2: none;
+    --blend-mode-3: none;
+    --blend-mode-4: none;
+    --blend-mode-5: overlay;
+    --blend-color-1: transparent;
+    --blend-color-2: transparent;
+    --blend-color-3: transparent;
+    --blend-color-4: transparent;
+    --blend-color-5: #af4949;
   }
 
-  .icon-square {
-    width: 70px;
-    height: 70px;
-    margin-top: -4rem;
-    margin-bottom: 1rem;
-  }
-  h1 {
-    font-weight: 900;
-    // background: linear-gradient(to right, var(--bs-primary) 20%, $indigo-500 80%);
-    // background-clip: text;
-    // // font-size: 72px;
-    // -webkit-text-fill-color: transparent;
-    font-size: 2rem;
-    @include media-breakpoint-up(sm) {
-      font-size: 7rem;
-    }
-  }
-
-  img {
-    &::after {
-      content: '';
-      width: 100%;
-      height: 100%;
-      inset: 0;
-      position: absolute;
-      background: inherit;
-      filter: blur(55px) contrast(200%);
-      z-index: -1;
-      opacity: 0.5;
-    }
-  }
-
-  .feature-1 {
-    filter: blur(70px);
-    opacity: 0.4;
-    position: absolute;
-    width: 1000px;
-    height: 700px;
-    z-index: 0;
-    left: 50%;
-    top: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    &::after {
-      // content: '';
-      width: 100%;
-      height: 100%;
-      background: conic-gradient(
-        from 0deg at 50% 50%,
-        var(--bs-primary) 0deg,
-        $indigo-500 54deg,
-        var(--bs-primary) 106deg,
-        $indigo-500 360deg
-      );
-      border-radius: 50%;
-      opacity: 0.3;
-      position: absolute;
-      z-index: -1;
-    }
-  }
-
-  .how-it-works-img {
-    margin-top: -50px;
-    object-fit: cover;
-    object-position: bottom;
-  }
-  .how-it-works-bg {
-    z-index: 0;
-    top: -25%;
-    left: -10%;
-    // mask-image: radial-gradient(ellipse, black 20%, transparent 90%);
-    position: absolute;
-    width: 120%;
-    height: 150%;
-    background-size: 16px 16px;
-    background-image: radial-gradient(circle, var(--bs-secondary-bg) 1px, transparent 1px);
-    // opacity: 0.6;
-  }
-
-  .console-bg {
-    z-index: -1;
-    top: -25%;
-    left: -10%;
-    mask-image: radial-gradient(ellipse, black 20%, transparent 90%);
-    position: absolute;
-    width: 120%;
-    height: 150%;
-    background-size: 20px 20px;
-    background-image: radial-gradient(circle, var(--bs-secondary-bg) 2px, transparent 2px);
-  }
-
-  * {
-    box-sizing: border-box;
-  }
-
-  body {
-    margin: 0;
-  }
-
-  .line {
-    background: linear-gradient(to right, var(--bs-primary), $indigo-500);
-    height: 55px;
-    width: 150%;
-    position: absolute;
-    top: 50%;
-    left: -25%;
-    transform: rotate(-10deg);
-    filter: blur(30px);
-  }
-  .marquee {
-    position: relative;
-
-    .marquee-content {
-      display: flex;
-      animation: scrolling 40s linear infinite;
-      gap: 1rem;
-
-      .marquee-item {
-        flex: 0 0 16vw;
-        img {
-          background-color: var(--bs-secondary-bg);
-          border-radius: var(--bs-border-radius-xxl);
-          display: block;
-          width: 100%;
-          height: 230px;
-        }
-      }
-    }
-  }
-  @keyframes scrolling {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translatex(-144vw);
-    }
-  }
-  .feature-group {
-    padding: 15rem 0 10rem;
-    border-width: 0.1rem;
-    border-style: solid;
-    border-image: linear-gradient(to bottom, var(--bs-secondary-bg) 0%, var(--bs-secondary-bg) 80%, rgba(0, 0, 0, 0)) 1 100%;
-    border-right: none;
-    border-top: none;
-    border-color: var(--bs-secondary-bg);
-    border-bottom: none;
-    transition: 1.3s;
-    .feature {
-      cursor: pointer;
-      border-left: 0.1rem solid transparent;
-      margin-left: -0.1rem;
-      // border-image: linear-gradient(to bottom, transparent, transparent, transparent, transparent) 1;
-
-      &:hover {
-        color: var(--bs-primary);
-        margin-left: -0.1rem;
-        border-left: 0.1rem solid var(--bs-primary);
-        // border-image: linear-gradient(to bottom, transparent, var(--bs-primary), var(--bs-primary), transparent) 1;
-        h5 {
-          background-color: var(--bs-primary) !important;
-          color: var(--bs-secondary-bg) !important;
-        }
-      }
-      &.active {
-        color: var(--bs-primary);
-        margin-left: -0.1rem;
-        border-left: 0.1rem solid var(--bs-primary);
-        // border-image: linear-gradient(to bottom, transparent, var(--bs-primary), var(--bs-primary), transparent) 1;
-        h5 {
-          background-color: var(--bs-primary) !important;
-          color: var(--bs-secondary-bg) !important;
-        }
-      }
-      .description {
-        min-height: 100px;
-        display: block;
-      }
-    }
-  }
-  .feature-img {
-    height: 250px;
-    width: 250px;
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: relative;
-    animation-name: floating;
-    animation-duration: 3s;
+  .imgloaded .content__title,
+  .imgloaded .content__text {
+    animation-name: glitch-anim-text;
+    animation-duration: var(--time-anim);
+    animation-timing-function: linear;
     animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
-    @keyframes floating {
-      0% {
-        transform: translate(0);
-      }
-      50% {
-        transform: translateY(15px);
-      }
-      100% {
-        transform: translate(0);
-      }
-    }
-    &::after {
-      content: '';
-      width: 100%;
-      height: 100%;
-      inset: 0;
-      position: absolute;
-      background: inherit;
-      filter: blur(20px) contrast(200%);
-      z-index: -1;
-      opacity: 0.5;
-    }
   }
 
-  .feature-bg {
-    z-index: -1;
-    top: 10%;
-    left: -25%;
-    mask-image: radial-gradient(ellipse, black 20%, transparent 90%);
+  .content__title {
+    font-size: 12vw;
+    margin: 35vh 0 0 0;
+    position: relative;
+    font-family: 'Playfair Display', serif;
+    animation-delay: calc(var(--delay-anim) + var(--time-anim) * 0.2);
+  }
+
+  .content__text {
+    font-family: 'IM Fell English', serif;
     position: absolute;
-    width: 150%;
-    height: 80%;
-    background-size: 24px 24px;
-    background-image: radial-gradient(circle, var(--bs-secondary-bg) 2px, transparent 2px);
-    // view-timeline-name: --image;
-    // view-timeline-axis: block;
-
-    // animation-timeline: --image;
-    // animation-name: dot-bg-scroll-animation;
-
-    // animation-fill-mode: both;
-    // overflow: hidden;
-    // animation-range: entry 30% cover 50%;
-
-    // @keyframes dot-bg-scroll-animation {
-    //   0% {
-    //   }
-    //   50% {
-    //     filter: brightness(1.8);
-    //   }
-    //   100% {
-    //   }
-    // }
+    font-size: 1.5em;
+    top: 4em;
+    right: 10vw;
+    max-width: 500px;
+    text-align: right;
+    font-weight: 400;
+    animation-delay: calc(var(--delay-anim) + var(--time-anim) * 0.25);
   }
 
-  ::ng-deep pre {
-    font-family: monospace;
-    font-size: 1rem;
-    .keyword {
-      color: $indigo-300;
-    }
-    .string {
-      color: $green-400;
-    }
-    .attr {
-      color: $orange-300;
-      color: var(--bs-primary);
-    }
-    .number {
-      color: $orange-500;
-    }
-    .comment {
-      color: $gray-700;
-    }
-    // .method {
-    //   color: var(--bs-primary);
-    // }
-  }
-
-  .dash {
-    background-color: rgba($black, 0.35);
-    box-shadow:
-      0 -0.5px #ffffff08,
-      inset 0 1px 1px #0000004d,
-      0 0.5px 0.5px #ffffff14;
-  }
-}
-
-::ng-deep body {
-  &[data-bs-theme='light'] .brand {
-    filter: brightness(0);
-  }
-}
-
-.card-scroll {
-  view-timeline-name: --image;
-  view-timeline-axis: block;
-
-  animation-timeline: --image;
-  animation-name: card-scroll-animation;
-
-  animation-fill-mode: both;
-  overflow: hidden;
-  &-1 {
-    animation-range: entry 20% cover 30%;
-    z-index: 12;
-  }
-  &-2 {
-    animation-range: entry 40% cover 50%;
-    z-index: 11;
-  }
-  &-3 {
-    animation-range: entry 60% cover 60%;
-    z-index: 10;
-  }
-  @keyframes card-scroll-animation {
-    0% {
-      opacity: 0;
-      transform: translateX(-250px) scale(0.6);
-    }
-
-    // 50% {
-    //   opacity: 1;
-    //   transform: translateX(0px);
-    // }
-    60% {
-      // opacity: 1;
-      // transform: translateX(-50px);
-      filter: brightness(1.8);
-    }
-    100% {
-      opacity: 1;
-      transform: translateX(0px);
+  @media screen and (max-width: 55em) {
+    .content__text {
+      position: relative;
+      right: auto;
+      top: auto;
+      font-size: 1.25em;
+      padding: 0 1em;
+      text-align: center;
     }
   }
-}
-.dash-scroll {
-  view-timeline-name: --image;
-  view-timeline-axis: block;
 
-  animation-timeline: --image;
-  animation-name: dash-scroll-animation;
+  /* Glitch styles */
+  .glitch {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: var(--glitch-width);
+    height: var(--glitch-height);
+    overflow: hidden;
+  }
 
-  animation-fill-mode: both;
-  overflow: hidden;
-  &-1 {
-    animation-range: entry 70% cover 40%;
+  .glitch__img {
+    position: absolute;
+    top: calc(-1 * var(--gap-vertical));
+    left: calc(-1 * var(--gap-horizontal));
+    width: calc(100% + var(--gap-horizontal) * 2);
+    height: calc(100% + var(--gap-vertical) * 2);
+    background: url(../img/img1.jpg) no-repeat 50% 0;
+    background-color: var(--blend-color-1);
+    background-size: cover;
+    transform: translate3d(0, 0, 0);
+    background-blend-mode: var(--blend-mode-1);
   }
-  &-2 {
-    animation-range: entry 70% cover 50%;
-  }
-  &-3 {
-    animation-range: entry 70% cover 70%;
-  }
-  &-4 {
-    animation-range: entry 70% cover 90%;
-  }
-  @keyframes dash-scroll-animation {
-    0% {
-      opacity: 0;
-      transform: translateX(250px);
-    }
 
-    50% {
-    }
-    60% {
-      filter: brightness(1.8);
-    }
-    100% {
-      opacity: 1;
-      transform: translateX(0px);
-    }
+  .glitch__img:nth-child(n + 2) {
+    opacity: 0;
   }
-}
-.flickering {
-  margin-top: 0.5rem;
-  height: 18px;
-  width: 2px;
-  background-color: var(--bs-primary);
-  animation: flickering 0.5s infinite alternate-reverse;
-  @keyframes flickering {
+
+  .imgloaded .glitch__img:nth-child(n + 2) {
+    animation-duration: var(--time-anim);
+    animation-delay: var(--delay-anim);
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+
+  .imgloaded .glitch__img:nth-child(2) {
+    background-color: var(--blend-color-2);
+    background-blend-mode: var(--blend-mode-2);
+    animation-name: glitch-anim-1;
+  }
+
+  .imgloaded .glitch__img:nth-child(3) {
+    background-color: var(--blend-color-3);
+    background-blend-mode: var(--blend-mode-3);
+    animation-name: glitch-anim-2;
+  }
+
+  .imgloaded .glitch__img:nth-child(4) {
+    background-color: var(--blend-color-4);
+    background-blend-mode: var(--blend-mode-4);
+    animation-name: glitch-anim-3;
+  }
+
+  .imgloaded .glitch__img:nth-child(5) {
+    background-color: var(--blend-color-5);
+    background-blend-mode: var(--blend-mode-5);
+    animation-name: glitch-anim-flash;
+  }
+
+  /* Animations */
+
+  @keyframes glitch-anim-1 {
     0% {
       opacity: 1;
+      transform: translate3d(var(--gap-horizontal), 0, 0);
+      -webkit-clip-path: polygon(0 2%, 100% 2%, 100% 5%, 0 5%);
+      clip-path: polygon(0 2%, 100% 2%, 100% 5%, 0 5%);
     }
-    45% {
+    2% {
+      -webkit-clip-path: polygon(0 15%, 100% 15%, 100% 15%, 0 15%);
+      clip-path: polygon(0 15%, 100% 15%, 100% 15%, 0 15%);
+    }
+    4% {
+      -webkit-clip-path: polygon(0 10%, 100% 10%, 100% 20%, 0 20%);
+      clip-path: polygon(0 10%, 100% 10%, 100% 20%, 0 20%);
+    }
+    6% {
+      -webkit-clip-path: polygon(0 1%, 100% 1%, 100% 2%, 0 2%);
+      clip-path: polygon(0 1%, 100% 1%, 100% 2%, 0 2%);
+    }
+    8% {
+      -webkit-clip-path: polygon(0 33%, 100% 33%, 100% 33%, 0 33%);
+      clip-path: polygon(0 33%, 100% 33%, 100% 33%, 0 33%);
+    }
+    10% {
+      -webkit-clip-path: polygon(0 44%, 100% 44%, 100% 44%, 0 44%);
+      clip-path: polygon(0 44%, 100% 44%, 100% 44%, 0 44%);
+    }
+    12% {
+      -webkit-clip-path: polygon(0 50%, 100% 50%, 100% 20%, 0 20%);
+      clip-path: polygon(0 50%, 100% 50%, 100% 20%, 0 20%);
+    }
+    14% {
+      -webkit-clip-path: polygon(0 70%, 100% 70%, 100% 70%, 0 70%);
+      clip-path: polygon(0 70%, 100% 70%, 100% 70%, 0 70%);
+    }
+    16% {
+      -webkit-clip-path: polygon(0 80%, 100% 80%, 100% 80%, 0 80%);
+      clip-path: polygon(0 80%, 100% 80%, 100% 80%, 0 80%);
+    }
+    18% {
+      -webkit-clip-path: polygon(0 50%, 100% 50%, 100% 55%, 0 55%);
+      clip-path: polygon(0 50%, 100% 50%, 100% 55%, 0 55%);
+    }
+    20% {
+      -webkit-clip-path: polygon(0 70%, 100% 70%, 100% 80%, 0 80%);
+      clip-path: polygon(0 70%, 100% 70%, 100% 80%, 0 80%);
+    }
+    21.9% {
       opacity: 1;
+      transform: translate3d(var(--gap-horizontal), 0, 0);
     }
-    55% {
-      opacity: 0;
-    }
+    22%,
     100% {
       opacity: 0;
+      transform: translate3d(0, 0, 0);
+      -webkit-clip-path: polygon(0 0, 0 0, 0 0, 0 0);
+      clip-path: polygon(0 0, 0 0, 0 0, 0 0);
     }
   }
-}
-.console-scroll {
-  view-timeline-name: --image;
-  view-timeline-axis: block;
 
-  animation-timeline: --image;
-  animation-name: console-scroll-animation;
-
-  animation-fill-mode: both;
-  overflow: hidden;
-  animation-range: entry 20% cover 50%;
-
-  @keyframes console-scroll-animation {
+  @keyframes glitch-anim-2 {
     0% {
-      opacity: 0;
-      transform: translateX(-50px) scale(0.8);
-      transform-origin: left;
-    }
-
-    50% {
-      filter: brightness(1.8);
-    }
-    100% {
       opacity: 1;
-      transform: translateX(0px) scale(1);
+      transform: translate3d(calc(-1 * var(--gap-horizontal)), 0, 0);
+      -webkit-clip-path: polygon(0 25%, 100% 25%, 100% 30%, 0 30%);
+      clip-path: polygon(0 25%, 100% 25%, 100% 30%, 0 30%);
     }
-  }
-}
-.features-scroll {
-  view-timeline-name: --image;
-  view-timeline-axis: block;
-
-  animation-timeline: --image;
-  animation-name: features-scroll-animation;
-
-  animation-fill-mode: both;
-  overflow: hidden;
-  animation-range: entry 20% cover 50%;
-  z-index: 1;
-  @keyframes features-scroll-animation {
-    0% {
-      transform: translateY(-150px) scaleY(1.2);
+    3% {
+      -webkit-clip-path: polygon(0 3%, 100% 3%, 100% 3%, 0 3%);
+      clip-path: polygon(0 3%, 100% 3%, 100% 3%, 0 3%);
     }
-    80% {
-      filter: brightness(1.8);
+    5% {
+      -webkit-clip-path: polygon(0 5%, 100% 5%, 100% 20%, 0 20%);
+      clip-path: polygon(0 5%, 100% 5%, 100% 20%, 0 20%);
     }
-    100% {
-      transform: translateY(0px);
+    7% {
+      -webkit-clip-path: polygon(0 20%, 100% 20%, 100% 20%, 0 20%);
+      clip-path: polygon(0 20%, 100% 20%, 100% 20%, 0 20%);
     }
-  }
-}
-.platforms-scroll {
-  view-timeline-name: --image;
-  view-timeline-axis: block;
-
-  animation-timeline: --image;
-  animation-name: platforms-scroll-animation;
-
-  animation-fill-mode: both;
-  overflow: hidden;
-  animation-range: entry 30% cover 40%;
-  z-index: 1;
-  @keyframes platforms-scroll-animation {
-    0% {
-      opacity: 0;
-      transform: scale(1.05);
+    9% {
+      -webkit-clip-path: polygon(0 40%, 100% 40%, 100% 40%, 0 40%);
+      clip-path: polygon(0 40%, 100% 40%, 100% 40%, 0 40%);
     }
-    100% {
+    11% {
+      -webkit-clip-path: polygon(0 52%, 100% 52%, 100% 59%, 0 59%);
+      clip-path: polygon(0 52%, 100% 52%, 100% 59%, 0 59%);
+    }
+    13% {
+      -webkit-clip-path: polygon(0 60%, 100% 60%, 100% 60%, 0 60%);
+      clip-path: polygon(0 60%, 100% 60%, 100% 60%, 0 60%);
+    }
+    15% {
+      -webkit-clip-path: polygon(0 75%, 100% 75%, 100% 75%, 0 75%);
+      clip-path: polygon(0 75%, 100% 75%, 100% 75%, 0 75%);
+    }
+    17% {
+      -webkit-clip-path: polygon(0 65%, 100% 65%, 100% 40%, 0 40%);
+      clip-path: polygon(0 65%, 100% 65%, 100% 40%, 0 40%);
+    }
+    19% {
+      -webkit-clip-path: polygon(0 45%, 100% 45%, 100% 50%, 0 50%);
+      clip-path: polygon(0 45%, 100% 45%, 100% 50%, 0 50%);
+    }
+    20% {
+      -webkit-clip-path: polygon(0 14%, 100% 14%, 100% 33%, 0 33%);
+      clip-path: polygon(0 14%, 100% 14%, 100% 33%, 0 33%);
+    }
+    21.9% {
       opacity: 1;
-      transform: scale(1);
+      transform: translate3d(calc(-1 * var(--gap-horizontal)), 0, 0);
+    }
+    22%,
+    100% {
+      opacity: 0;
+      transform: translate3d(0, 0, 0);
+      -webkit-clip-path: polygon(0 0, 0 0, 0 0, 0 0);
+      clip-path: polygon(0 0, 0 0, 0 0, 0 0);
     }
   }
-}
-.feature-img-scroll {
-  view-timeline-name: --image;
-  view-timeline-axis: block;
 
-  animation-timeline: --image;
-  animation-name: dot-bg-scroll-animation;
-
-  animation-fill-mode: both;
-  animation-range: entry 30% cover 60%;
-
-  @keyframes dot-bg-scroll-animation {
+  @keyframes glitch-anim-3 {
     0% {
+      opacity: 1;
+      transform: translate3d(0, calc(-1 * var(--gap-vertical)), 0) scale3d(-1, -1, 1);
+      -webkit-clip-path: polygon(0 1%, 100% 1%, 100% 3%, 0 3%);
+      clip-path: polygon(0 1%, 100% 1%, 100% 3%, 0 3%);
     }
-    50% {
-      filter: brightness(1.8);
+    1.5% {
+      -webkit-clip-path: polygon(0 10%, 100% 10%, 100% 9%, 0 9%);
+      clip-path: polygon(0 10%, 100% 10%, 100% 9%, 0 9%);
     }
+    2% {
+      -webkit-clip-path: polygon(0 5%, 100% 5%, 100% 6%, 0 6%);
+      clip-path: polygon(0 5%, 100% 5%, 100% 6%, 0 6%);
+    }
+    2.5% {
+      -webkit-clip-path: polygon(0 20%, 100% 20%, 100% 20%, 0 20%);
+      clip-path: polygon(0 20%, 100% 20%, 100% 20%, 0 20%);
+    }
+    3% {
+      -webkit-clip-path: polygon(0 10%, 100% 10%, 100% 10%, 0 10%);
+      clip-path: polygon(0 10%, 100% 10%, 100% 10%, 0 10%);
+    }
+    5% {
+      -webkit-clip-path: polygon(0 30%, 100% 30%, 100% 25%, 0 25%);
+      clip-path: polygon(0 30%, 100% 30%, 100% 25%, 0 25%);
+    }
+    5.5% {
+      -webkit-clip-path: polygon(0 15%, 100% 15%, 100% 16%, 0 16%);
+      clip-path: polygon(0 15%, 100% 15%, 100% 16%, 0 16%);
+    }
+    7% {
+      -webkit-clip-path: polygon(0 40%, 100% 40%, 100% 39%, 0 39%);
+      clip-path: polygon(0 40%, 100% 40%, 100% 39%, 0 39%);
+    }
+    8% {
+      -webkit-clip-path: polygon(0 20%, 100% 20%, 100% 21%, 0 21%);
+      clip-path: polygon(0 20%, 100% 20%, 100% 21%, 0 21%);
+    }
+    9% {
+      -webkit-clip-path: polygon(0 60%, 100% 60%, 100% 55%, 0 55%);
+      clip-path: polygon(0 60%, 100% 60%, 100% 55%, 0 55%);
+    }
+    10.5% {
+      -webkit-clip-path: polygon(0 30%, 100% 30%, 100% 31%, 0 31%);
+      clip-path: polygon(0 30%, 100% 30%, 100% 31%, 0 31%);
+    }
+    11% {
+      -webkit-clip-path: polygon(0 70%, 100% 70%, 100% 69%, 0 69%);
+      clip-path: polygon(0 70%, 100% 70%, 100% 69%, 0 69%);
+    }
+    13% {
+      -webkit-clip-path: polygon(0 40%, 100% 40%, 100% 41%, 0 41%);
+      clip-path: polygon(0 40%, 100% 40%, 100% 41%, 0 41%);
+    }
+    14% {
+      -webkit-clip-path: polygon(0 80%, 100% 80%, 100% 75%, 0 75%);
+      clip-path: polygon(0 80%, 100% 80%, 100% 75%, 0 75%);
+    }
+    14.5% {
+      -webkit-clip-path: polygon(0 50%, 100% 50%, 100% 51%, 0 51%);
+      clip-path: polygon(0 50%, 100% 50%, 100% 51%, 0 51%);
+    }
+    15% {
+      -webkit-clip-path: polygon(0 90%, 100% 90%, 100% 90%, 0 90%);
+      clip-path: polygon(0 90%, 100% 90%, 100% 90%, 0 90%);
+    }
+    16% {
+      -webkit-clip-path: polygon(0 60%, 100% 60%, 100% 60%, 0 60%);
+      clip-path: polygon(0 60%, 100% 60%, 100% 60%, 0 60%);
+    }
+    18% {
+      -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 99%, 0 99%);
+      clip-path: polygon(0 100%, 100% 100%, 100% 99%, 0 99%);
+    }
+    20% {
+      -webkit-clip-path: polygon(0 70%, 100% 70%, 100% 71%, 0 71%);
+      clip-path: polygon(0 70%, 100% 70%, 100% 71%, 0 71%);
+    }
+    21.9% {
+      opacity: 1;
+      transform: translate3d(0, calc(-1 * var(--gap-vertical)), 0) scale3d(-1, -1, 1);
+    }
+    22%,
     100% {
+      opacity: 0;
+      transform: translate3d(0, 0, 0);
+      -webkit-clip-path: polygon(0 0, 0 0, 0 0, 0 0);
+      clip-path: polygon(0 0, 0 0, 0 0, 0 0);
     }
   }
-}
-.brands-img-scroll {
-  view-timeline-name: --image;
-  view-timeline-axis: block;
 
-  animation-timeline: --image;
-  animation-name: brands-bg-scroll-animation;
-
-  animation-fill-mode: both;
-  animation-range: entry 30% cover 60%;
-
-  @keyframes brands-bg-scroll-animation {
+  @keyframes glitch-anim-text {
     0% {
-      transform: scale(0.5);
+      transform: translate3d(calc(-1 * var(--gap-horizontal)), 0, 0) scale3d(-1, -1, 1);
+      -webkit-clip-path: polygon(0 20%, 100% 20%, 100% 21%, 0 21%);
+      clip-path: polygon(0 20%, 100% 20%, 100% 21%, 0 21%);
     }
+    2% {
+      -webkit-clip-path: polygon(0 33%, 100% 33%, 100% 33%, 0 33%);
+      clip-path: polygon(0 33%, 100% 33%, 100% 33%, 0 33%);
+    }
+    4% {
+      -webkit-clip-path: polygon(0 44%, 100% 44%, 100% 44%, 0 44%);
+      clip-path: polygon(0 44%, 100% 44%, 100% 44%, 0 44%);
+    }
+    5% {
+      -webkit-clip-path: polygon(0 50%, 100% 50%, 100% 20%, 0 20%);
+      clip-path: polygon(0 50%, 100% 50%, 100% 20%, 0 20%);
+    }
+    6% {
+      -webkit-clip-path: polygon(0 70%, 100% 70%, 100% 70%, 0 70%);
+      clip-path: polygon(0 70%, 100% 70%, 100% 70%, 0 70%);
+    }
+    7% {
+      -webkit-clip-path: polygon(0 80%, 100% 80%, 100% 80%, 0 80%);
+      clip-path: polygon(0 80%, 100% 80%, 100% 80%, 0 80%);
+    }
+    8% {
+      -webkit-clip-path: polygon(0 50%, 100% 50%, 100% 55%, 0 55%);
+      clip-path: polygon(0 50%, 100% 50%, 100% 55%, 0 55%);
+    }
+    9% {
+      -webkit-clip-path: polygon(0 70%, 100% 70%, 100% 80%, 0 80%);
+      clip-path: polygon(0 70%, 100% 70%, 100% 80%, 0 80%);
+    }
+    9.9% {
+      transform: translate3d(calc(-1 * var(--gap-horizontal)), 0, 0) scale3d(-1, -1, 1);
+    }
+    10%,
     100% {
-      transform: scale(1);
+      transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+  }
+
+  /* Flash */
+  @keyframes glitch-anim-flash {
+    0%,
+    5% {
+      opacity: 0.2;
+      transform: translate3d(var(--gap-horizontal), var(--gap-vertical), 0);
+    }
+    5.5%,
+    100% {
+      opacity: 0;
+      transform: translate3d(0, 0, 0);
     }
   }
 }
