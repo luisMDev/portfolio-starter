@@ -1,7 +1,12 @@
 :host {
   header {
-    backdrop-filter: blur(10px);
-    background-color: rgba(var(--bs-body-bg-rgb), 0.6);
+    // backdrop-filter: blur(10px);
+    // background-color: rgba(var(--bs-body-bg-rgb), 0.6);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
     .logo {
       height: 37px;
     }

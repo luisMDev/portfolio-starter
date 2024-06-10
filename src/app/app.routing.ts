@@ -14,10 +14,6 @@ export const routes: Routes = [
         path: 'portfolio',
         loadComponent: () => import('./views/layout/views/landing/landing.component').then((m) => m.LandingComponent),
       },
-      {
-        path: 'pricing',
-        loadComponent: () => import('./views/layout/views/pricing/pricing.component').then((m) => m.PricingComponent),
-      },
     ],
   },
   {
